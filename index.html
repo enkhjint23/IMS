@@ -216,8 +216,8 @@
 
   <!-- ===== INTRO ===== -->
   <section class="card active" id="c0">
-    <h1>Дараа жилийн төлөвлөлтөд саналаа өгнө үү</h1>
-    <p class="sub">IMS багийн 4 асуулт. Сэдвээ сонгоод, товч тайлбар бичихэд хангалттай — 2 минут.</p>
+    <h1>Хялбар НМТ-г бүрдүүлцгээе!</h1>
+    <p class="sub">Дараах хялбар 4 асуултад үнэнчээр хариулаад өгөөрэй~ </p>
     <label class="fld" for="nameInput">Таны нэр</label>
     <input type="text" id="nameInput" autocomplete="name" placeholder="Овог нэр">
     <div class="actions">
@@ -228,14 +228,13 @@
   <!-- ===== Q1 ===== -->
   <section class="card" id="c1" data-step="1">
     <div class="num">1</div>
-    <p class="q">Дараа жилийн стандартын хүрээнд юуг сайжруулья гэж бодож байна вэ?</p>
+    <p class="q">Дараа жил стандартын хэрэгжилтийн хүрээнд юуг сайжруулья гэж бодож байна вэ?</p>
     <p class="hint">Холбогдох сэдвүүдээ сонгоно уу.</p>
     <div class="chips" id="chips1"></div>
     <label class="fld" for="t1">Дэлгэрүүлж бичих</label>
     <textarea id="t1" placeholder="Жишээ: Үл тохирлын бүртгэлийг нэг системд төвлөрүүлж, хугацааны хяналттай болгох."></textarea>
     <div class="actions">
       <button class="next" data-goto="c2">Дараах</button>
-      <button class="skip" data-goto="c2">Алгасах</button>
       <button class="back" data-goto="c0">← Буцах</button>
     </div>
   </section>
@@ -250,7 +249,6 @@
     <textarea id="t2" placeholder="Жишээ: Гэрээний хянан баталгаажуулалтын дараалал тодорхойгүй, хугацаа алддаг."></textarea>
     <div class="actions">
       <button class="next" data-goto="c3">Дараах</button>
-      <button class="skip" data-goto="c3">Алгасах</button>
       <button class="back" data-goto="c1">← Буцах</button>
     </div>
   </section>
@@ -265,7 +263,6 @@
     <textarea id="t3" placeholder="Жишээ: Дотоод аудитын ур чадвараа ахиулж, ISO 19011-ийн сургалтад хамрагдах."></textarea>
     <div class="actions">
       <button class="next" data-goto="c4">Дараах</button>
-      <button class="skip" data-goto="c4">Алгасах</button>
       <button class="back" data-goto="c2">← Буцах</button>
     </div>
   </section>
@@ -277,7 +274,7 @@
     <p class="hint">Холбогдох сэдвүүдээ сонгоно уу.</p>
     <div class="chips" id="chips4"></div>
     <label class="fld" for="t4">Дэлгэрүүлж бичих</label>
-    <textarea id="t4" placeholder="Жишээ: Сар бүр нэг хүн сурсан зүйлээ 15 минутад хуваалцдаг болох."></textarea>
+    <textarea id="t4" placeholder="Жишээ: Сар бүр сурсан зүйлээ 15 минутад хуваалцдаг болох."></textarea>
     <div class="actions">
       <button class="next" id="submitBtn">Илгээх</button>
       <button class="back" data-goto="c3">← Буцах</button>
@@ -304,7 +301,7 @@ const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyA4Gz4yuWE1BFxVy1Om_7
 const TAGS = {
   1: ['Баримтжуулалт','Дотоод аудит','Эрсдэлийн үнэлгээ','Үл тохирлын менежмент','Сургалт, ур чадвар','Зорилт, хэмжүүр','Нийцлийн үнэлгээ','Эрчим хүчний менежмент','Хангамжийн хяналт'],
   2: ['Худалдан авалт','Гэрээний менежмент','ХАБЭА','Тайлагнал','Мэдээллийн урсгал','Засвар үйлчилгээ','Хүний нөөц','Дижитал систем','Төсөв, зардал'],
-  3: ['Мэргэжлийн сертификат','Аудитын ур чадвар','Англи хэл','Дата шинжилгээ','Илтгэх ур чадвар','Салбарын мэдлэг','Гадаад сургалт','Манлайлал'],
+  3: ['Мэргэжлийн сертификат','Аудитын ур чадвар','Дата шинжилгээ','Илтгэх ур чадвар','Салбарын мэдлэг','Гадаад сургалт','Манлайлал'],
   4: ['Тогтмол уулзалт','Мэдлэг хуваалцах','Ажлын хуваарилалт','Хамтарсан арга хэмжээ','Багийн сургалт','Санал хүсэлтийн суваг','Ажлын хэрэгсэл, программ']
 };
 
