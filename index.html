@@ -17,11 +17,11 @@
     --seal:#1B6F5A;
     --white:#FFFFFF;
   }
-
+ 
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-
+ 
   html,body{height:100%;}
-
+ 
   body{
     margin:0;
     font-family:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
@@ -38,7 +38,7 @@
     padding:20px 16px calc(20px + env(safe-area-inset-bottom));
     min-height:100%;
   }
-
+ 
   .sheet{
     width:100%;
     max-width:480px;
@@ -49,7 +49,7 @@
     overflow:hidden;
     position:relative;
   }
-
+ 
   /* ---- top rule / progress ---- */
   .rule{
     display:flex;
@@ -71,18 +71,18 @@
     font-size:12px;font-weight:600;color:var(--ink-soft);
     font-variant-numeric:tabular-nums;letter-spacing:.02em;
   }
-
+ 
   /* ---- cards ---- */
   .card{display:none;padding:26px 22px 24px;position:relative;}
   .card.active{display:block;}
-
+ 
   .num{
     position:absolute;top:14px;right:18px;
     font-size:64px;font-weight:700;line-height:1;
     color:transparent;-webkit-text-stroke:1px var(--line);
     pointer-events:none;user-select:none;
   }
-
+ 
   h1{
     font-size:25px;line-height:1.25;margin:0 0 10px;
     letter-spacing:-.01em;font-weight:700;max-width:22ch;
@@ -98,7 +98,7 @@
   .hint{
     font-size:13px;color:var(--ink-soft);margin:0 0 10px;
   }
-
+ 
   /* ---- chips ---- */
   .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;}
   .chip{
@@ -115,7 +115,7 @@
   .chip[aria-pressed="true"]{
     background:var(--ink);border-color:var(--ink);color:var(--white);
   }
-
+ 
   /* ---- inputs ---- */
   label.fld{display:block;font-size:13px;color:var(--ink-soft);margin-bottom:6px;}
   input[type=text], textarea{
@@ -130,7 +130,7 @@
   input[type=text]:focus, textarea:focus{
     outline:2px solid var(--mark);outline-offset:-1px;border-color:var(--mark);background:var(--white);
   }
-
+ 
   /* ---- actions ---- */
   .actions{
     display:flex;align-items:center;gap:14px;margin-top:20px;
@@ -155,11 +155,11 @@
     background:none;border:none;cursor:pointer;padding:6px 2px;margin-left:auto;
   }
   .back:hover{color:var(--ink);}
-
+ 
   button:focus-visible, .chip:focus-visible, input:focus-visible{
     outline:2px solid var(--mark);outline-offset:2px;
   }
-
+ 
   /* ---- done ---- */
   #done{text-align:center;padding:46px 26px 40px;}
   .stamp{
@@ -179,7 +179,7 @@
   }
   #done p{font-size:15px;line-height:1.6;color:var(--ink-soft);margin:0 auto;max-width:30ch;}
   #done strong{color:var(--ink);}
-
+ 
   .fallback{
     margin-top:22px;text-align:left;
     border:1px solid var(--mark);
@@ -192,12 +192,12 @@
     background:var(--mark);color:var(--white);border:none;border-radius:2px;
     padding:10px 18px;cursor:pointer;
   }
-
+ 
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
     .stamp{opacity:1;transform:rotate(-7deg);}
   }
-
+ 
   @media (max-width:400px){
     .card{padding:22px 18px 20px;}
     h1{font-size:22px;}
@@ -207,28 +207,30 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="sheet">
   <div class="rule">
     <div class="ticks" id="ticks" aria-hidden="true"></div>
     <div class="count" id="count">01 / 04</div>
   </div>
-
+ 
   <!-- ===== INTRO ===== -->
   <section class="card active" id="c0">
-    <h1>Хялбар НМТ-г хамтдаа бүрдүүлцгээе!</h1>
-    <p class="sub">Таны оролцоо бүхэн үнэ цэнэтэй </p>
-    <label class="fld" for="nameInput">Таны нэр</label>
-    <input type="text" id="nameInput" autocomplete="name" placeholder="Овог нэр">
+    <h1>Хялбар НМТ-г хамтдаа бүрдүүлцгээе! 🤝</h1>
+    <p class="sub">Таны оролцоо бүхэн үнэ цэнэтэй ✨ 3 асуулт, 2 минут.</p>
+    <label class="fld" for="nameInput">Таны нэр 🙂</label>
+    <p class="hint">Нэрээ бичиж болно, эсвэл таныг илтгэх хоч, дуртай зүйл — юу ч байсан болно 😄</p>
+    <input type="text" id="nameInput" autocomplete="name" placeholder="Жишээ: Энхжин / Кофены дуучин / 🐱">
     <div class="actions">
-      <button class="next" id="startBtn" disabled>Эхлэх</button>
+      <button class="next" id="startBtn" disabled>Эхлэх 🚀</button>
     </div>
   </section>
-
+ 
   <!-- ===== Q1 ===== -->
   <section class="card" id="c1" data-step="1">
     <div class="num">1</div>
-    <p class="q">Дараа жил НМТ-ны хүрээнд Компанийн ямар үйл ажиллагаа/процессыг бодитоор сайжруулмаар байна вэ?</p>
+    <p class="q">🛠️ Дараа жил НМТ-ны хүрээнд Компанийн ямар үйл ажиллагаа/процессыг бодитоор сайжруулмаар байна вэ?</p>
+    <p class="hint">Нээлттэй бичнэ үү — юу ч санаанд орсон болно 💭</p>
     <label class="fld" for="t1">Дэлгэрэнгүй</label>
     <textarea id="t1" placeholder="Жишээ: Үл тохирлын бүртгэлийг нэг системд төвлөрүүлж, хугацааны хяналттай болгох."></textarea>
     <div class="actions">
@@ -236,64 +238,63 @@
       <button class="back" data-goto="c0">← Буцах</button>
     </div>
   </section>
-
+ 
   <!-- ===== Q2 ===== -->
   <section class="card" id="c2" data-step="2">
     <div class="num">2</div>
-    <p class="q">Та НМТ-ны аль чиглэлд өөрийн туршлага, ур чадвараа хуваалцаж, оролцох хүсэлтэй байна вэ?</p>
-    <p class="hint">Холбогдох сэдвүүдээ сонгоно уу.</p>
+    <p class="q">🙋 Та НМТ-ны аль чиглэлд өөрийн туршлага, ур чадвараа хуваалцаж, оролцох хүсэлтэй байна вэ?</p>
+    <p class="hint">Холбогдох чиглэлээ сонгоно уу 👇 (хэдийг ч сонгож болно)</p>
     <div class="chips" id="chips2"></div>
     <label class="fld" for="t2">Дэлгэрүүлж бичих</label>
-    <textarea id="t2" placeholder="Жишээ: Гэрээний хянан баталгаажуулалтын дараалал тодорхойгүй, хугацаа алддаг."></textarea>
+    <textarea id="t2" placeholder="Жишээ: Дотоод аудитын сургалт заах, шинэ апп тестлэхэд туслах."></textarea>
     <div class="actions">
       <button class="next" data-goto="c3">Дараах</button>
       <button class="back" data-goto="c1">← Буцах</button>
     </div>
   </section>
-
+ 
   <!-- ===== Q3 ===== -->
   <section class="card" id="c3" data-step="3">
     <div class="num">3</div>
-    <p class="q">НМТ-ны хүрээнд өөрийгөө хөгжүүлж, мэргэшмээр байгаа чиглэл юу вэ?</p>
-    <p class="hint">Холбогдох сэдвүүдээ сонгоно уу.</p>
+    <p class="q">🌱 НМТ-ны хүрээнд өөрийгөө хөгжүүлж, мэргэшмээр байгаа чиглэл юу вэ?</p>
+    <p class="hint">Сонгоод, доор нэмж бичиж болно 👇</p>
     <div class="chips" id="chips3"></div>
     <label class="fld" for="t3">Дэлгэрүүлж бичих</label>
     <textarea id="t3" placeholder="Жишээ: Дотоод аудитын ур чадвараа ахиулж, ISO 19011-ийн сургалтад хамрагдах."></textarea>
     <div class="actions">
-      <button class="next" data-goto="c4">Дараах</button>
+      <button class="next" id="submitBtn">Илгээх</button>
       <button class="back" data-goto="c2">← Буцах</button>
     </div>
   </section>
-
+ 
   <!-- ===== DONE ===== -->
   <section class="card" id="done">
     <div class="stamp">ХҮЛЭЭН АВЛАА</div>
-    <p><strong id="doneName">Баярлалаа</strong>, санал тань бүртгэгдлээ. Нэгтгэсэн үр дүнг хэзээ нэг цагт танилцуулна ххэ</p>
+    <p><strong id="doneName">Баярлалаа</strong>, санал тань бүртгэгдлээ 🎉 Нэгтгэсэн үр дүнг хэзээ нэг цагт танилцуулна ххэ</p>
     <div id="fallbackSlot"></div>
   </section>
 </div>
-
+ 
 <script>
 /* =========================================================
    1. ТОХИРУУЛГА — Apps Script-ийн Web App URL-ээ энд тавина
    ========================================================= */
 const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyA4Gz4yuWE1BFxVy1Om_7ngbiLSoBe1DAwiialT0kcgROXHmGTKdNEwKx0OpugTZiG/exec';
-
+ 
 /* =========================================================
    2. Сэдвийн шошго (chips) — чөлөөтэй засварлаж болно
    ========================================================= */
 const TAGS = {
-  1: ['Дотоод хяналт','Дотоод аудит','Эрсдэлийн үнэлгээ','Үл тохирлын менежмент','Сургалт & Workshop','App & site','Нийцлийн үнэлгээ','Эрчим хүчний менежмент'],
-  2: ['Дотоод хяналт','Дотоод аудит','Эрсдэлийн үнэлгээ','Үл тохирлын менежмент','Сургалт & Workshop','App & site','Нийцлийн үнэлгээ','Эрчим хүчний менежмент'],
-  3: ['Мэргэжлийн сертификат','Аудитын ур чадвар','Дата шинжилгээ','Илтгэх ур чадвар','Салбарын мэдлэг','Гадаад сургалт','Манлайлал'],
-  4: ['Тогтмол уулзалт','Мэдлэг хуваалцах','Ажлын хуваарилалт','Хамтарсан арга хэмжээ','Багийн сургалт','Санал хүсэлтийн суваг','Ажлын хэрэгсэл, программ']
+  2: ['Сургалт & workshop','App & site хөгжүүлэлт','Эрсдэлийн менежмент','Дотоод хяналт','Дотоод аудит','Процессын зураглал','Баримтжуулалт','Дата, тайлан','Стандартын шаардлага'],
+  3: ['Эрсдэлийн менежмент','Дотоод хяналт','Дотоод аудитор','Процессын сайжруулалт','Стандарт, баримт бичиг','Дата шинжилгээ','Сургалт заах ур чадвар','Мэргэжлийн сертификат']
 };
-
+ 
 /* ---------- chips render ---------- */
 const selected = {1:new Set(),2:new Set(),3:new Set(),4:new Set()};
-
+ 
 Object.keys(TAGS).forEach(k=>{
   const box = document.getElementById('chips'+k);
+  if(!box) return;                      // тухайн асуултад chip байхгүй бол алгасна
   TAGS[k].forEach(tag=>{
     const b = document.createElement('button');
     b.type = 'button';
@@ -308,11 +309,12 @@ Object.keys(TAGS).forEach(k=>{
     box.appendChild(b);
   });
 });
-
+ 
 /* ---------- progress ---------- */
+const STEPS = 3;                        // асуултын тоо
 const ticksEl = document.getElementById('ticks');
 const countEl = document.getElementById('count');
-for(let i=0;i<4;i++){
+for(let i=0;i<STEPS;i++){
   const t = document.createElement('div');
   t.className = 'tick';
   t.innerHTML = '<i></i>';
@@ -320,27 +322,28 @@ for(let i=0;i<4;i++){
 }
 function setProgress(step){
   const ticks = ticksEl.children;
-  for(let i=0;i<4;i++) ticks[i].classList.toggle('on', i < step);
-  countEl.textContent = String(Math.max(step,1)).padStart(2,'0') + ' / 04';
+  for(let i=0;i<STEPS;i++) ticks[i].classList.toggle('on', i < step);
+  countEl.textContent = String(Math.max(step,1)).padStart(2,'0') + ' / ' + String(STEPS).padStart(2,'0');
 }
 setProgress(0);
-
+ 
 /* ---------- navigation ---------- */
 function goTo(id){
   document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
   const card = document.getElementById(id);
+  if(!card) return;
   card.classList.add('active');
-  const step = card.dataset.step ? parseInt(card.dataset.step,10) : (id === 'done' ? 4 : 0);
+  const step = card.dataset.step ? parseInt(card.dataset.step,10) : (id === 'done' ? STEPS : 0);
   setProgress(step);
   window.scrollTo({top:0});
   const first = card.querySelector('textarea, input[type=text]');
   if(first && id !== 'c0') first.focus({preventScroll:true});
 }
-
+ 
 document.querySelectorAll('[data-goto]').forEach(b=>{
   b.addEventListener('click',()=>goTo(b.dataset.goto));
 });
-
+ 
 /* ---------- intro ---------- */
 const nameInput = document.getElementById('nameInput');
 const startBtn = document.getElementById('startBtn');
@@ -351,10 +354,10 @@ nameInput.addEventListener('keydown',e=>{
   if(e.key === 'Enter' && !startBtn.disabled) goTo('c1');
 });
 startBtn.addEventListener('click',()=>goTo('c1'));
-
+ 
 /* ---------- submit ---------- */
 const submitBtn = document.getElementById('submitBtn');
-
+ 
 function buildPayload(){
   return {
     name: nameInput.value.trim(),
@@ -364,12 +367,10 @@ function buildPayload(){
     q2_text: document.getElementById('t2').value.trim(),
     q3_tags: [...selected[3]].join(', '),
     q3_text: document.getElementById('t3').value.trim(),
-    q4_tags: [...selected[4]].join(', '),
-    q4_text: document.getElementById('t4').value.trim(),
     submittedAt: new Date().toISOString()
   };
 }
-
+ 
 async function send(payload){
   if(!/^https:\/\/script\.google\.com\//.test(ENDPOINT)) return false;
   try{
@@ -380,12 +381,23 @@ async function send(payload){
     });
     return res.ok;
   }catch(err){
-    console.error('Submit failed', err);
-    return false;
+    console.warn('Direct request blocked, retrying', err);
+    try{
+      await fetch(ENDPOINT,{
+        method:'POST',
+        mode:'no-cors',
+        headers:{'Content-Type':'text/plain;charset=utf-8'},
+        body: JSON.stringify(payload)
+      });
+      return true;
+    }catch(err2){
+      console.error('Submit failed', err2);
+      return false;
+    }
   }
 }
-
-submitBtn.addEventListener('click', async ()=>{
+ 
+if(submitBtn) submitBtn.addEventListener('click', async ()=>{
   submitBtn.disabled = true;
   submitBtn.textContent = 'Илгээж байна…';
   const payload = buildPayload();
@@ -394,19 +406,18 @@ submitBtn.addEventListener('click', async ()=>{
   const ok = await send(payload);
   if(!ok) showFallback(payload);
 });
-
+ 
 function showFallback(payload){
   const slot = document.getElementById('fallbackSlot');
   const box = document.createElement('div');
   box.className = 'fallback';
   const lines = [
     'Нэр: ' + payload.name,
-    '1. Стандарт: ' + [payload.q1_tags, payload.q1_text].filter(Boolean).join(' — '),
-    '2. Процесс: ' + [payload.q2_tags, payload.q2_text].filter(Boolean).join(' — '),
-    '3. Хувь хүн: ' + [payload.q3_tags, payload.q3_text].filter(Boolean).join(' — '),
-    '4. Баг: ' + [payload.q4_tags, payload.q4_text].filter(Boolean).join(' — ')
+    '1. Процесс: ' + [payload.q1_tags, payload.q1_text].filter(Boolean).join(' — '),
+    '2. Оролцоо: ' + [payload.q2_tags, payload.q2_text].filter(Boolean).join(' — '),
+    '3. Хөгжил: ' + [payload.q3_tags, payload.q3_text].filter(Boolean).join(' — ')
   ].join('\n');
-
+ 
   const p = document.createElement('p');
   p.textContent = 'Сүлжээний алдаанаас болж илгээгдсэнгүй. Доорх текстийг хуулж, зохион байгуулагчид илгээнэ үү.';
   const ta = document.createElement('textarea');
@@ -419,10 +430,11 @@ function showFallback(payload){
   btn.addEventListener('click',()=>{
     navigator.clipboard.writeText(lines).then(()=>{ btn.textContent = 'Хуулагдлаа ✓'; });
   });
-
+ 
   box.append(p, ta, btn);
   slot.appendChild(box);
 }
 </script>
 </body>
 </html>
+ 
